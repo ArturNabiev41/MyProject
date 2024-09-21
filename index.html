@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путешествия</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Путешествия по миру</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#directions">Наши направления</a></li>
+                <li><a href="#tips">Полезные советы</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Добро пожаловать на наш сайт!</h2>
+        <p>Здесь вы найдете лучшие предложения для путешествий, советы туристов и многое другое.</p>
+    </section>
+
+    <section id="directions">
+        <h2>Наши направления</h2>
+        <div class="places">
+            <div class="place">
+                <h3>Европа</h3>
+                <p>Популярные страны: Франция, Германия, Италия.</p>
+            </div>
+            <div class="place">
+                <h3>Азия</h3>
+                <p>Популярные страны: Япония, Китай, Индия.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tips">
+        <h2>Полезные советы</h2>
+        <ul>
+            <li>Всегда проверяйте документы перед поездкой.</li>
+            <li>Не забывайте про страхование.</li>
+            <li>Заранее бронируйте отели и авиабилеты.</li>
+        </ul>
+    </section>
+
+    <section id="reviews">
+        <h2>Отзывы путешественников</h2>
+        <div id="reviewsContainer">
+        </div>
+        <button id="addReviewBtn">Добавить отзыв</button>
+    </section>
+
+    <section id="contacts">
+        <h2>Контакты</h2>
+        <form id="contactForm">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="message">Сообщение:</label>
+            <textarea id="message" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 Путешествия по миру</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
