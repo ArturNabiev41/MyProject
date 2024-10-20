@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путешествия по миру</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Путешествия по миру</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#directions">Наши направления</a></li>
+                <li><a href="#tips">Полезные советы</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Добро пожаловать на наш сайт!</h2>
+            <p>Здесь вы найдете лучшие предложения для путешествий, советы туристов и многое другое.</p>
+        </section>
+
+        <section id="directions">
+            <h2>Наши направления</h2>
+            <div class="places">
+                <div class="place">
+                    <h3>Европа</h3>
+                    <img src="image/europe.png" alt="Европа" class="place-image" loading="lazy">
+                    <p>Популярные страны: Франция, Германия, Италия.</p>
+                </div>
+                <div class="place">
+                    <h3>Азия</h3>
+                    <img src="image/asia.png" alt="Азия" class="place-image" loading="lazy">
+                    <p>Популярные страны: Япония, Китай, Индия.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips">
+            <h2>Полезные советы</h2>
+            <div class="tips-container">
+                <div class="tip">
+                    <img src="image/documents.png" alt="Документы" class="tip-icon">
+                    <p>Всегда проверяйте документы перед поездкой.</p>
+                </div>
+                <div class="tip">
+                    <img src="image/insurance.png" alt="Страховка" class="tip-icon">
+                    <p>Не забывайте про страховку.</p>
+                </div>
+                <div class="tip">
+                    <img src="image/booking.png" alt="Бронирование" class="tip-icon">
+                    <p>Заранее бронируйте отели и авиабилеты.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <h2>Отзывы путешественников</h2>
+            <div class="places" id="reviews-container">
+                <div class="place">
+                    <h3>Путешественник 1</h3>
+                    <img src="image/review1.png" alt="Путешественник 1" class="place-image" loading="lazy">
+                    <p>"Прекрасное путешествие в Европу, сервис был на высшем уровне!"</p>
+                </div>
+                <div class="place">
+                    <h3>Путешественник 2</h3>
+                    <img src="image/review2.png" alt="Путешественник 2" class="place-image" loading="lazy">
+                    <p>"Я всегда мечтала побывать в Азии, и моя мечта сбылась!"</p>
+                </div>
+            </div>
+
+            <h3>Добавить отзыв</h3>
+            <form id="review-form">
+                <div class="search-field">
+                    <label for="reviewer-name">Ваше имя:</label>
+                    <input type="text" id="reviewer-name" required>
+                </div>
+                <div class="search-field">
+                    <label for="gender">Ваш пол:</label>
+                    <select id="gender" required>
+                        <option value="" disabled selected>Выберите пол</option>
+                        <option value="male">Мужчина</option>
+                        <option value="female">Женщина</option>
+                    </select>
+                </div>
+                <div class="search-field">
+                    <label for="review-text">Ваш отзыв:</label>
+                    <textarea id="review-text" required></textarea>
+                </div>
+                <button type="submit" id="add-review">Добавить отзыв</button>
+            </form>
+        </section>
+
+        <div class="flight-search">
+            <form id="flight-form">
+                <h3>Подсчет рейсов</h3>
+                <div class="search-field">
+                    <label for="departure">Откуда летим:</label>
+                    <input type="text" id="departure" name="departure" required>
+                    <span class="error-message" id="departure-error"></span>
+                </div>
+
+                <div class="search-field">
+                    <label for="destination">Куда летим:</label>
+                    <input type="text" id="destination" name="destination" required>
+                    <span class="error-message" id="destination-error"></span>
+                </div>
+
+                <div class="search-field">
+                    <label for="departure-date">Дата вылета:</label>
+                    <input type="date" id="departure-date" required>
+                    <span class="error-message" id="departure-date-error"></span>
+                </div>
+
+                <div class="search-field">
+                    <label for="passengers">Количество пассажиров:</label>
+                    <input type="number" id="passengers" min="1" max="10" value="1" required>
+                    <span class="error-message" id="passengers-error"></span>
+                </div>
+
+                <button type="button" id="calculate">Подсчитать сумму</button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <p>© 2024 Путешествия по миру</p>
+            </div>
+
+            <div class="footer-section">
+                <ul class="footer-links">
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Условия использования</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <p>Контакты:</p>
+                <p>Email: <a href="/cdn-cgi/l/email-protection#d1b8bfb7be91b4a9b0bca1bdb4ffb2bebc"><span
+                            class="__cf_email__" data-cfemail="f1989f979eb19489909c819d94df929e9c"><span
+                                class="__cf_email__" data-cfemail="3a68710b08090e7a5d575b535614595557"><span
+                                    class="__cf_email__"
+                                    data-cfemail="de8c95efecedea9eb9b3bfb7b2f0bdb1b3">[email&#160;protected]</span></span></span></a>
+                </p>
+                <p>Телефон: +1 (123) 456-7890</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+</body>
+
+</html>
